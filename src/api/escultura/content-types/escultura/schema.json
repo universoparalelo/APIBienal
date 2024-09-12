@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "esculturas",
+  "info": {
+    "singularName": "escultura",
+    "pluralName": "esculturas",
+    "displayName": "Escultura",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "f_inicio": {
+      "type": "date",
+      "required": false
+    },
+    "f_finalizacion": {
+      "type": "date"
+    },
+    "tematica": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tematica.tematica"
+    },
+    "img_antes": {
+      "type": "string"
+    },
+    "img_durante": {
+      "type": "string"
+    },
+    "img_despues": {
+      "type": "string"
+    },
+    "escultor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::escultor.escultor"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "imagenes",
+  "info": {
+    "singularName": "imagen",
+    "pluralName": "imagenes",
+    "displayName": "Imagen"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "url": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "estado": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "escultura": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::escultura.escultura"
+    }
+  }
+}

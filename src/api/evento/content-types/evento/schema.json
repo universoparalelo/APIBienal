@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eventos",
+  "info": {
+    "singularName": "evento",
+    "pluralName": "eventos",
+    "displayName": "Eventos",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "lugar": {
+      "type": "string"
+    },
+    "imagen": {
+      "type": "string"
+    },
+    "fecha_hora": {
+      "type": "datetime"
+    },
+    "tematica": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tematica.tematica"
+    }
+  }
+}
